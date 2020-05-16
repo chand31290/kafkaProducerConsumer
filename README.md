@@ -11,4 +11,6 @@ Start Zookeeper :  zookeeper-server-start.sh kafka/config/zookeeper.properties
 
 Start Kafka Broker:  kafka-server-start.sh kafka/config/server.properties
 
-You can now execute the Producer and Consumer in the project
+Create topic :  kafka-topics.sh --bootstrap-server localhost:9092 --create --topic twitter-tweets --partitions 6 --replication-factor 1 
+
+Create consumer : kafka-console-consumer.sh --bootstrap-server localhost:9092  --topic twitter-tweets
